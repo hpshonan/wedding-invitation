@@ -196,7 +196,12 @@ form{
     margin:auto;
 }
 
-input,textarea{
+label {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+select,input,textarea{
     width:100%;
     padding:15px;
     margin-bottom:15px;

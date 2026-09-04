@@ -130,21 +130,27 @@
 <h2>Xác Nhận Tham Dự</h2>
 </div>
 
-<form action="https://docs.google.com/forms/d/e/1FAIpQLScxxxxxxx/formResponse" method="POST" target="_blank">
-<input type="text" id="fullName" placeholder="Họ và tên">
-<input type="tel" id="phoneNumber" placeholder="Số điện thoại">
-<!-- Xác nhận tham dự -->
-<label>Quý vị có thể tham dự tiệc cưới không?</label>
-<select id="attendance" required>
-<option value="">-- Chọn --</option>
-<option value="Có tham dự">Có tham dự</option>
-<option value="Không tham dự">Không tham dự</option>
-</select>
-<!-- Số lượng người -->
-<label>Số người tham dự</label>
-<input type="number" id="guestCount" placeholder="Số người tham dự">
-<textarea id="message" rows="4" placeholder="Lời chúc dành cho cô dâu chú rể"></textarea>
-<button type="submit">Gửi xác nhận</button>
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSfDCa9lW1enyov81fllahPgOMEF09yEsRwsYPEZa0bVZZry_A/formResponse" method="POST" target="_blank">
+    <input type="text" id="fullName" placeholder="Họ và tên">
+    <input type="tel" id="phoneNumber" placeholder="Số điện thoại">
+    <!-- Xác nhận tham dự -->
+    <label>Quý vị có thể tham dự tiệc cưới không?</label>
+    <select id="attendance" required>
+        <option value="">-- Chọn --</option>
+        <option value="Có tham dự">Có tham dự</option>
+        <option value="Không tham dự">Không tham dự</option>
+    </select>
+    <!-- Số lượng người -->
+    <div id="guestSection" style="display:none;">
+        <label>Số người tham dự</label>
+        <input
+            type="number"
+            id="guestCount"
+            min="1"
+            placeholder="Số người tham dự">
+    </div>
+    <textarea id="message" rows="4" placeholder="Lời chúc dành cho cô dâu chú rể"></textarea>
+    <button type="submit">Gửi xác nhận</button>
 </form>
 
 </div>

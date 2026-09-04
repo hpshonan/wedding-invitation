@@ -64,19 +64,10 @@ document.getElementById("rsvpForm")
 });
 
 attendance.addEventListener("change", () => {
-    5
-     
-    6
     if (attendance.value === "Không tham dự") {
-    7
-    guestCount.parentElement.style.display = "none";
-    8
+        guestCount.parentElement.style.display = "none";
     } else {
-    9
-    guestCount.parentElement.style.display = "block";
-    10
+        guestCount.parentElement.style.display = "block";
+        document.getElementById("guestCount").value = "";
     }
-    11
-     
-    12
-    });
+});
