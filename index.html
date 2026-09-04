@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Wedding Invitation</title>
+
+https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:#333;
+    background:#fff;
+}
+
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title h2{
+    font-family:'Great Vibes',cursive;
+    font-size:56px;
+    color:#c79a63;
+}
+
+.title p{
+    color:#777;
+    margin-top:10px;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-family:'Great Vibes',cursive;
+    font-size:90px;
+}
+
+.hero-content p{
+    margin:15px 0;
+    font-size:20px;
+}
+
+.date{
+    letter-spacing:3px;
+}
+
+.nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(255,255,255,.95);
+    z-index:999;
+    padding:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.nav ul{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    list-style:none;
+}
+
+.nav a{
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+}
+
+/* BRIDE GROOM */
+
+.couple{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+}
+
+.person{
+    text-align:center;
+}
+
+.person img{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:20px;
+}
+
+.person h3{
+    color:#c79a63;
+    margin-bottom:10px;
+}
+
+/* COUNTDOWN */
+
+.countdown{
+    background:#faf7f2;
+}
+
+.timer{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.box{
+    width:120px;
+    padding:20px;
+    background:white;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+.box span{
+    display:block;
+    font-size:36px;
+    font-weight:bold;
+    color:#c79a63;
+}
+
+/* STORY */
+
+.story{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+}
+
+/* EVENT */
+
+.events-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.event-card{
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:16px;
+}
+
+/* RSVP */
+
+.rsvp{
+    background:#faf7f2;
+}
+
+form{
+    max-width:600px;
+    margin:auto;
+}
+
+input,textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+button{
+    background:#c79a63;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* GIFT */
+
+.gift{
+    text-align:center;
+}
+
+.qr{
+    width:250px;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.footer-title{
+    font-family:'Great Vibes',cursive;
+    font-size:42px;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:60px;
+}
+
+.title h2{
+    font-size:42px;
+}
+
+.nav ul{
+    gap:12px;
+    font-size:13px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+<ul>
+<li>#coupleCặp đôi</a></li>
+<li>#storyCâu chuyện</a></li>
+<li>#eventLễ cưới</a></li>
+<li>#galleryAlbum</a></li>
+<li>#rsvpRSVP</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+<p>Save The Date</p>
+<h1>Nguyễn Hoạch & Trương Thẩm</h1>
+<p class="date">20.12.2026</p>
+</div>
+</section>
+
+<section id="couple">
+<div class="container">
+
+<div class="title">
+<h2>Cô Dâu & Chú Rể</h2>
+<p>Hai trái tim, một hành trình</p>
+</div>
+
+<div class="couple">
+
+<div class="person">
+https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000
+<h3>Trương Thẩm</h3>
+<p>Dịu dàng, chân thành và yêu thương gia đình.</p>
+</div>
+
+<div class="person">
+https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000
+<h3>Nguyễn Hoạch</h3>
+<p>Kiên định, trách nhiệm và luôn hướng về tương lai.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="countdown">
+<div class="container">
+
+<div class="title">
+<h2>Đếm Ngược</h2>
+<p>Cho đến ngày trọng đại</p>
+</div>
+
+<div class="timer">
+<div class="box"><span id="days">0</span>Ngày</div>
+<div class="box"><span id="hours">0</span>Giờ</div>
+<div class="box"><span id="minutes">0</span>Phút</div>
+<div class="box"><span id="seconds">0</span>Giây</div>
+</div>
+
+</div>
+</section>
+
+<section id="story">
+<div class="container">
+
+<div class="title">
+<h2>Chuyện Tình Yêu</h2>
+</div>
+
+<div class="story">
+<p>
+Mỗi cuộc gặp gỡ đều có một lý do. Chúng tôi gặp nhau,
+đồng hành cùng nhau qua những năm tháng thanh xuân,
+chia sẻ những niềm vui, nỗi buồn và cùng xây dựng
+ước mơ về một mái ấm hạnh phúc.
+</p>
+<br>
+<p>
+Hôm nay, chúng tôi mong được cùng gia đình, bạn bè
+chứng kiến khoảnh khắc bắt đầu một chương mới của cuộc đời.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="event">
+<div class="container">
+
+<div class="title">
+<h2>Thông Tin Hôn Lễ</h2>
+</div>
+
+<div class="events-grid">
+
+<div class="event-card">
+<h3>Lễ Thành Hôn</h3>
+<br>
+<p>09:00 sáng</p>
+<p>20/12/2026</p>
+<p>Trung tâm Hội nghị ABC</p>
+<p>Quận 1, TP.HCM</p>
+</div>
+
+<div class="event-card">
+<h3>Tiệc Cưới</h3>
+<br>
+<p>11:00 trưa</p>
+<p>20/12/2026</p>
+<p>Sảnh Diamond</p>
+<p>Trung tâm Hội nghị ABC</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="gallery">
+<div class="container">
+
+<div class="title">
+<h2>Album Ảnh</h2>
+</div>
+
+<div class="gallery">
+https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1000
+https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=1000
+https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1000
+https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1000
+</div>
+
+</div>
+</section>
+
+<section class="rsvp" id="rsvp">
+<div class="container">
+
+<div class="title">
+<h2>Xác Nhận Tham Dự</h2>
+</div>
+
+<form>
+<input type="text" placeholder="Họ và tên">
+<input type="tel" placeholder="Số điện thoại">
+<textarea rows="4" placeholder="Lời chúc dành cho cô dâu chú rể"></textarea>
+<button type="submit">Gửi xác nhận</button>
+</form>
+
+</div>
+</section>
+
+<section>
+<div class="container gift">
+
+<div class="title">
+<h2>Mừng Cưới</h2>
+<p>Xin chân thành cảm ơn</p>
+</div>
+
+<p>Ngân hàng Vietcombank</p>
+<p>Chủ tài khoản: Nguyễn Hoạch</p>
+<p>STK: 123456789</p>
+
+https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=WeddingGift
+
+</div>
+</section>
+
+<footer>
+<div class="footer-title">
+Nguyễn Hoạch & Trương Thẩm
+</div>
+<p>Cảm ơn sự hiện diện của bạn ❤️</p>
+</footer>
+
+<script>
+const weddingDay = new Date("Dec 20, 2026 09:00:00").getTime();
+
+setInterval(() => {
+
+const now = new Date().getTime();
+const gap = weddingDay - now;
+
+const day = Math.floor(gap / (1000*60*60*24));
+const hour = Math.floor((gap % (1000*60*60*24))/(1000*60*60));
+const minute = Math.floor((gap % (1000*60*60))/60000);
+const second = Math.floor((gap % 60000)/1000);
+
+document.getElementById("days").innerText = day;
+document.getElementById("hours").innerText = hour;
+document.getElementById("minutes").innerText = minute;
+document.getElementById("seconds").innerText = second;
+
+},1000);
+</script>
+
+</body>
+</html>
