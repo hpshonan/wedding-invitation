@@ -50,24 +50,29 @@ document.getElementById("rsvpForm")
         "entry.933396984",
         document.getElementById("message").value
     );
+    try {
+        await fetch(
+            "https://docs.google.com/forms/d/e/FORM_ID/formResponse",
+            {
+                method: "POST",
+                mode: "no-cors",
+                body: formData
+            }
+        );
+        alert("Cảm ơn quý vị đã xác nhận tham dự ❤️");
 
-    await fetch(
-        "https://docs.google.com/forms/d/e/FORM_ID/formResponse",
-        {
-            method: "POST",
-            mode: "no-cors",
-            body: formData
+        document.getElementById("rsvpForm").reset();
+        guestSection.style.display = "none";
+    } catch (error) {
+        alert("Có lỗi xảy ra, vui lòng thử lại.");
         }
-    );
-
-    alert("Cảm ơn quý vị đã xác nhận tham dự ❤️");
 });
 
 attendance.addEventListener("change", () => {
-    if (attendance.value === "Không tham dự") {
-        guestCount.parentElement.style.display = "none";
-    } else {
+    if (attendance.value === "Có tham dự") {
         guestCount.parentElement.style.display = "block";
         document.getElementById("guestCount").value = "";
+    } else {
+        guestSection.style.display = "none";
     }
 });
