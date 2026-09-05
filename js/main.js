@@ -165,3 +165,43 @@ document.addEventListener("keydown", (event) => {
         closeGallery();
     }
 });
+
+const weddingMusic = document.getElementById("weddingMusic");
+const musicToggle = document.getElementById("musicToggle");
+
+function updateMusicToggle() {
+    const isPlaying = !weddingMusic.paused;
+    musicToggle.innerHTML = isPlaying ? "&#128266;" : "&#128263;";
+    musicToggle.setAttribute("aria-label", isPlaying ? "Tắt nhạc" : "Bật nhạc");
+    musicToggle.title = isPlaying ? "Tắt nhạc" : "Bật nhạc";
+}
+
+function playWeddingMusic() {
+    weddingMusic.play().catch(() => {
+        updateMusicToggle();
+    });
+}
+
+playWeddingMusic();
+
+document.addEventListener("click", (event) => {
+    if (event.target !== musicToggle) {
+        playWeddingMusic();
+    }
+}, { once: true });
+
+musicToggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+
+    if (weddingMusic.paused) {
+        playWeddingMusic();
+    } else {
+        weddingMusic.pause();
+    }
+
+    updateMusicToggle();
+});
+
+weddingMusic.addEventListener("play", updateMusicToggle);
+weddingMusic.addEventListener("pause", updateMusicToggle);
+updateMusicToggle();
