@@ -76,3 +76,92 @@ attendance.addEventListener("change", () => {
         guestSection.style.display = "none";
     }
 });
+
+const galleryImages = [
+    "images/gallery1.jpg",
+    "images/gallery2.jpg",
+    "images/gallery4.jpg",
+    "images/gallery5.jpg",
+    "images/gallery6.jpg",
+    "images/gallery7.jpg",
+    "images/gallery8.jpg",
+    "images/gallery9.jpg",
+    "images/gallery10.jpg",
+    "images/gallery11.jpg",
+    "images/gallery12.jpg",
+    "images/gallery13.jpg",
+    "images/gallery15.jpg",
+    "images/gallery16.jpg",
+    "images/gallery17.jpg",
+    "images/gallery18.jpg",
+    "images/gallery19.jpg",
+    "images/gallery20.jpg",
+    "images/gallery21.jpg",
+    "images/gallery22.jpg",
+    "images/gallery23.jpg",
+    "images/gallery24.jpg",
+    "images/gallery25.jpg",
+    "images/gallery26.jpg",
+    "images/gallery27.jpg",
+    "images/gallery28.jpg",
+    "images/gallery29.jpg",
+    "images/gallery30.jpg"
+];
+
+const galleryModal = document.getElementById("galleryModal");
+const galleryImage = document.getElementById("galleryImage");
+const galleryCounter = document.getElementById("galleryCounter");
+let currentImage = 0;
+
+function showGalleryImage(index) {
+    currentImage = (index + galleryImages.length) % galleryImages.length;
+    galleryImage.src = galleryImages[currentImage];
+    galleryCounter.textContent = `${currentImage + 1} / ${galleryImages.length}`;
+}
+
+function closeGallery() {
+    galleryModal.classList.remove("is-open");
+    galleryModal.setAttribute("aria-hidden", "true");
+}
+
+document.getElementById("openGallery").addEventListener("click", () => {
+    galleryModal.classList.add("is-open");
+    galleryModal.setAttribute("aria-hidden", "false");
+    showGalleryImage(0);
+});
+
+document.querySelectorAll(".gallery-preview img").forEach((image, index) => {
+    image.addEventListener("click", () => {
+        galleryModal.classList.add("is-open");
+        galleryModal.setAttribute("aria-hidden", "false");
+        showGalleryImage(index);
+    });
+});
+
+document.getElementById("closeGallery").addEventListener("click", closeGallery);
+document.getElementById("previousImage").addEventListener("click", () => {
+    showGalleryImage(currentImage - 1);
+});
+document.getElementById("nextImage").addEventListener("click", () => {
+    showGalleryImage(currentImage + 1);
+});
+
+galleryModal.addEventListener("click", (event) => {
+    if (event.target === galleryModal) {
+        closeGallery();
+    }
+});
+
+document.addEventListener("keydown", (event) => {
+    if (!galleryModal.classList.contains("is-open")) {
+        return;
+    }
+
+    if (event.key === "ArrowLeft") {
+        showGalleryImage(currentImage - 1);
+    } else if (event.key === "ArrowRight") {
+        showGalleryImage(currentImage + 1);
+    } else if (event.key === "Escape") {
+        closeGallery();
+    }
+});
