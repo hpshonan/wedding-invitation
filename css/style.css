@@ -86,16 +86,6 @@ section{
     letter-spacing:3px;
 }
 
-.nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:rgba(255,255,255,.95);
-    z-index:999;
-    padding:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
-}
-
 .nav ul{
     display:flex;
     justify-content:center;
@@ -163,15 +153,6 @@ section{
     font-size:36px;
     font-weight:bold;
     color:#c79a63;
-}
-
-/* STORY */
-
-.story{
-    max-width:800px;
-    margin:auto;
-    text-align:center;
-    line-height:1.8;
 }
 
 /* EVENT */
@@ -329,18 +310,6 @@ button{
     padding:12px 20px;
     border-radius:10px;
     text-decoration:none;
-}
-
-/* GIFT */
-
-.gift{
-    text-align:center;
-}
-
-.qr{
-    width:250px;
-    border-radius:15px;
-    margin-top:20px;
 }
 
 /* FOOTER */

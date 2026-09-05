@@ -2,6 +2,7 @@
 const weddingDay = new Date("Sep 27, 2026 09:00:00").getTime();
 const attendance = document.getElementById("attendance");
 const guestCount = document.getElementById("guestCount");
+const guestSection = document.getElementById("guestSection");
 setInterval(() => {
 
 const now = new Date().getTime();
@@ -52,7 +53,7 @@ document.getElementById("rsvpForm")
     );
     try {
         await fetch(
-            "https://docs.google.com/forms/d/e/FORM_ID/formResponse",
+            "https://docs.google.com/forms/d/e/1FAIpQLSfDCa9lW1enyov81fllahPgOMEF09yEsRwsYPEZa0bVZZry_A/formResponse",
             {
                 method: "POST",
                 mode: "no-cors",
@@ -111,6 +112,7 @@ const galleryImages = [
 const galleryModal = document.getElementById("galleryModal");
 const galleryImage = document.getElementById("galleryImage");
 const galleryCounter = document.getElementById("galleryCounter");
+const closeGalleryButton = document.getElementById("closeGallery");
 let currentImage = 0;
 
 function showGalleryImage(index) {
@@ -122,11 +124,14 @@ function showGalleryImage(index) {
 function closeGallery() {
     galleryModal.classList.remove("is-open");
     galleryModal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
 }
 
 document.getElementById("openGallery").addEventListener("click", () => {
     galleryModal.classList.add("is-open");
     galleryModal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    closeGalleryButton.focus();
     showGalleryImage(0);
 });
 
@@ -134,11 +139,13 @@ document.querySelectorAll(".gallery-preview img").forEach((image, index) => {
     image.addEventListener("click", () => {
         galleryModal.classList.add("is-open");
         galleryModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        closeGalleryButton.focus();
         showGalleryImage(index);
     });
 });
 
-document.getElementById("closeGallery").addEventListener("click", closeGallery);
+    closeGalleryButton.addEventListener("click", closeGallery);
 document.getElementById("previousImage").addEventListener("click", () => {
     showGalleryImage(currentImage - 1);
 });

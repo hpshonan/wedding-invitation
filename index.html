@@ -20,7 +20,6 @@
     <meta property="og:image:secure_url" content="https://hpshonan.github.io/wedding-invitation/images/cover.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:url" content="https://hpshonan.github.io/wedding-invitation/">
-    <meta property="og:type" content="website">
     <meta property="og:locale" content="vi_VN">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -38,7 +37,7 @@
     <div class="hero-content">
         <p>Save The Date</p>
         <h1>Hoài Phương & Thanh Thanh</h1>
-        <p class="date">27.12.2026</p>
+        <p class="date">27.9.2026</p>
     </div>
 </section>
 
@@ -144,8 +143,8 @@
             <h2>Xác Nhận Tham Dự</h2>
         </div>
         <form id="rsvpForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfDCa9lW1enyov81fllahPgOMEF09yEsRwsYPEZa0bVZZry_A/formResponse" method="POST" target="_blank">
-            <input type="text" id="fullName" placeholder="Họ và tên">
-            <input type="tel" id="phoneNumber" placeholder="Số điện thoại">
+            <input name="fullNam" type="text" id="fullName" placeholder="Họ và tên">
+            <input name="phoneNum"type="tel" id="phoneNumber" placeholder="Số điện thoại">
             <!-- Xác nhận tham dự -->
             <select id="attendance" required>
                 <option value="" selected disabled>Quý vị có thể tham dự tiệc cưới không?</option>
@@ -156,9 +155,11 @@
             <div id="guestSection" style="display:none;">
                 <label>Số người tham dự</label>
                 <input
+                    name="guestCount"
                     type="number"
                     id="guestCount"
                     min="1"
+                    max="10"
                     placeholder="Số người tham dự">
             </div>
             <textarea id="message" rows="4" placeholder="Lời chúc dành cho cô dâu chú rể"></textarea>
