@@ -302,6 +302,16 @@ button{
     cursor:pointer;
 }
 
+.map-button{
+    display:inline-block;
+    margin-top:10px;
+    background:#c79a63;
+    color:white;
+    padding:12px 20px;
+    border-radius:10px;
+    text-decoration:none;
+}
+
 /* GIFT */
 
 .gift{
