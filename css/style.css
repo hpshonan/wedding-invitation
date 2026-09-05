@@ -209,6 +209,16 @@ select,input,textarea{
     border-radius:10px;
 }
 
+input::placeholder,
+textarea::placeholder,
+select:invalid{
+    color:#757575;
+}
+
+select option{
+    color:#333;
+}
+
 button{
     background:#c79a63;
     color:white;
