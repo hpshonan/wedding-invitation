@@ -357,6 +357,12 @@ section{
     padding:64px 16px;
 }
 
+.hero{
+    align-items: flex-end;
+    padding-bottom: 80px;
+    background-position: center 15%;
+}
+
 .gallery-preview{
     grid-template-columns:repeat(2,1fr);
 }
@@ -367,11 +373,6 @@ section{
 
 .hero-content h1{
     font-size:60px;
-}
-
-.hero-content{
-    position:relative;
-    top:40px;
 }
 
 .title h2{
