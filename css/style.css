@@ -150,11 +150,6 @@ section{
     height:auto;
 }
 
-.invitation-note{
-    margin-top:24px;
-    color:#777;
-    line-height:1.7;
-}
 
 /* COUNTDOWN */
 
@@ -375,7 +370,8 @@ section{
 }
 
 .hero-content{
-    transform:translateY(40px);
+    position:relative;
+    top:40px;
 }
 
 .title h2{
