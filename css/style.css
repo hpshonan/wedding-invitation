@@ -56,6 +56,14 @@ section{
     margin-top:10px;
 }
 
+.section-kicker{
+    color:#c79a63 !important;
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
 /* HERO */
 
 .hero{
@@ -128,6 +136,25 @@ section{
 
 .saint-name{
     color:#d9b98f;
+}
+
+/* INVITATION */
+
+.invitation{
+    background:#fffaf5;
+    overflow:hidden;
+}
+
+.invitation-card{
+    max-width:610px;
+    margin:auto;
+    text-align:center;
+}
+
+.invitation-card img{
+    display:block;
+    width:100%;
+    height:auto;
 }
 
 /* COUNTDOWN */
@@ -331,6 +358,10 @@ footer{
 }
 
 @media(max-width:768px){
+
+section{
+    padding:64px 16px;
+}
 
 .gallery-preview{
     grid-template-columns:repeat(2,1fr);
