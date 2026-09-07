@@ -157,6 +157,12 @@ section{
     height:auto;
 }
 
+.invitation-note{
+    margin-top:24px;
+    color:#777;
+    line-height:1.7;
+}
+
 /* COUNTDOWN */
 
 .countdown{
@@ -373,6 +379,10 @@ section{
 
 .hero-content h1{
     font-size:60px;
+}
+
+.hero-content{
+    transform:translateY(40px);
 }
 
 .title h2{
