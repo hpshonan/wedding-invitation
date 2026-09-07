@@ -3,6 +3,9 @@ const weddingDay = new Date("Sep 27, 2026 09:00:00").getTime();
 const attendance = document.getElementById("attendance");
 const guestCount = document.getElementById("guestCount");
 const guestSection = document.getElementById("guestSection");
+const siteDialog = document.getElementById("siteDialog");
+const siteDialogMessage = document.getElementById("siteDialogMessage");
+const closeSiteDialogButton = document.getElementById("closeSiteDialog");
 const countdownElements = {
     days: document.getElementById("days"),
     hours: document.getElementById("hours"),
@@ -35,6 +38,33 @@ function updateCountdown() {
 
 let countdownTimer = setInterval(updateCountdown, 1000);
 updateCountdown();
+
+function showSiteDialog(message) {
+    siteDialogMessage.textContent = message;
+    siteDialog.classList.add("is-open");
+    siteDialog.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    closeSiteDialogButton.focus();
+}
+
+function closeSiteDialog() {
+    siteDialog.classList.remove("is-open");
+    siteDialog.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+}
+
+closeSiteDialogButton.addEventListener("click", closeSiteDialog);
+siteDialog.addEventListener("click", (event) => {
+    if (event.target === siteDialog) {
+        closeSiteDialog();
+    }
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && siteDialog.classList.contains("is-open")) {
+        closeSiteDialog();
+    }
+});
 
 document.getElementById("rsvpForm")
 .addEventListener("submit", async (e) => {
@@ -76,12 +106,12 @@ document.getElementById("rsvpForm")
                 body: formData
             }
         );
-        alert("Cảm ơn quý vị đã xác nhận tham dự ❤️");
+        showSiteDialog("Cảm ơn quý vị đã xác nhận tham dự ❤️");
 
         document.getElementById("rsvpForm").reset();
         guestSection.style.display = "none";
     } catch (error) {
-        alert("Có lỗi xảy ra, vui lòng thử lại.");
+        showSiteDialog("Có lỗi xảy ra, vui lòng thử lại.");
         }
 });
 

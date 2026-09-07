@@ -337,6 +337,43 @@ button{
     text-decoration:none;
 }
 
+.site-dialog{
+    position:fixed;
+    inset:0;
+    z-index:1003;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:rgba(0,0,0,.55);
+}
+
+.site-dialog.is-open{
+    display:flex;
+}
+
+.site-dialog-box{
+    width:min(420px,100%);
+    padding:30px;
+    background:#fffaf5;
+    border-radius:12px;
+    box-shadow:0 10px 35px rgba(0,0,0,.2);
+    text-align:center;
+}
+
+.site-dialog-box h2{
+    margin-bottom:14px;
+    color:#c79a63;
+    font-family:'Great Vibes',cursive;
+    font-size:38px;
+}
+
+.site-dialog-box p{
+    margin-bottom:22px;
+    color:#555;
+    line-height:1.6;
+}
+
 /* FOOTER */
 
 footer{
