@@ -3,22 +3,38 @@ const weddingDay = new Date("Sep 27, 2026 09:00:00").getTime();
 const attendance = document.getElementById("attendance");
 const guestCount = document.getElementById("guestCount");
 const guestSection = document.getElementById("guestSection");
-setInterval(() => {
+const countdownElements = {
+    days: document.getElementById("days"),
+    hours: document.getElementById("hours"),
+    minutes: document.getElementById("minutes"),
+    seconds: document.getElementById("seconds")
+};
 
-const now = new Date().getTime();
-const gap = weddingDay - now;
+function updateCountdown() {
+    const now = new Date().getTime();
+    const gap = weddingDay - now;
 
-const day = Math.floor(gap / (1000*60*60*24));
-const hour = Math.floor((gap % (1000*60*60*24))/(1000*60*60));
-const minute = Math.floor((gap % (1000*60*60))/60000);
-const second = Math.floor((gap % 60000)/1000);
+    if (gap <= 0) {
+        Object.values(countdownElements).forEach((element) => {
+            element.innerText = "0";
+        });
+        clearInterval(countdownTimer);
+        return;
+    }
 
-document.getElementById("days").innerText = day;
-document.getElementById("hours").innerText = hour;
-document.getElementById("minutes").innerText = minute;
-document.getElementById("seconds").innerText = second;
+    const day = Math.floor(gap / (1000 * 60 * 60 * 24));
+    const hour = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minute = Math.floor((gap % (1000 * 60 * 60)) / 60000);
+    const second = Math.floor((gap % 60000) / 1000);
 
-},1000);
+    countdownElements.days.innerText = day;
+    countdownElements.hours.innerText = hour;
+    countdownElements.minutes.innerText = minute;
+    countdownElements.seconds.innerText = second;
+}
+
+let countdownTimer = setInterval(updateCountdown, 1000);
+updateCountdown();
 
 document.getElementById("rsvpForm")
 .addEventListener("submit", async (e) => {
