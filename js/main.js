@@ -1,5 +1,5 @@
 
-const weddingDay = new Date("Sep 27, 2026 09:00:00").getTime();
+const weddingDay = new Date("Nov 15, 2026 15:00:00").getTime();
 const attendance = document.getElementById("attendance");
 const guestCount = document.getElementById("guestCount");
 const guestSection = document.getElementById("guestSection");
@@ -128,17 +128,14 @@ const galleryImages = [
     "images/gallery1.jpg",
     "images/gallery2.jpg",
     "images/gallery4.jpg",
-    "images/gallery5.jpg",
     "images/gallery6.jpg",
     "images/gallery7.jpg",
     "images/gallery8.jpg",
     "images/gallery9.jpg",
     "images/gallery10.jpg",
-    "images/gallery11.jpg",
     "images/gallery12.jpg",
     "images/gallery13.jpg",
     "images/gallery15.jpg",
-    "images/gallery16.jpg",
     "images/gallery17.jpg",
     "images/gallery18.jpg",
     "images/gallery19.jpg",
@@ -150,9 +147,11 @@ const galleryImages = [
     "images/gallery25.jpg",
     "images/gallery26.jpg",
     "images/gallery27.jpg",
-    "images/gallery28.jpg",
     "images/gallery29.jpg",
-    "images/gallery30.jpg"
+    "images/gallery30.jpg",
+    "images/gallery41.jpg",
+    "images/gallery42.jpg",
+    "images/gallery50.jpg"
 ];
 
 const galleryModal = document.getElementById("galleryModal");
