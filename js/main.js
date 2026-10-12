@@ -128,7 +128,6 @@ const galleryImages = [
     "images/gallery1.jpg",
     "images/gallery2.jpg",
     "images/gallery4.jpg",
-    "images/gallery6.jpg",
     "images/gallery7.jpg",
     "images/gallery8.jpg",
     "images/gallery9.jpg",
@@ -149,9 +148,15 @@ const galleryImages = [
     "images/gallery27.jpg",
     "images/gallery29.jpg",
     "images/gallery30.jpg",
+    "images/gallery40.jpg",
     "images/gallery41.jpg",
     "images/gallery42.jpg",
-    "images/gallery50.jpg"
+    "images/gallery43.jpg",
+    "images/gallery44.jpg",
+    "images/gallery45.jpg",
+    "images/gallery50.jpg",
+    "images/gallery51.jpg",
+    "images/gallery55.jpg"
 ];
 
 const galleryModal = document.getElementById("galleryModal");
